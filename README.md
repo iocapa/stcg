@@ -3,6 +3,9 @@ Scripted Template Content Generator.
 Designed to produce text content from a template containing script and text.
 Used mostly for generating code based on a json data model.
 
+## Disclaimer
+I started this project some time ago mainly to learn typescript and use this tool in my embedded projects. Seems to work for now, haven't done any real extensive testing. Use at your own risk :).
+
 ## Contributing & bugs
 Please fork the repository, make the changes in your fork and include tests. Once you're done making changes, send in a pull request.
 
