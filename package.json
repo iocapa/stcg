@@ -1,0 +1,60 @@
+{
+  "name": "stcg",
+  "version": "1.0.9",
+  "description": "Scripted Template Content Generator",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "bin": "lib/cli.js",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iocapa/stcg.git"
+  },
+  "keywords": [
+    "Scripted",
+    "Template",
+    "Content",
+    "Code",
+    "Generator"
+  ],
+  "author": "Ionut Catalin Pavel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iocapa/stcg/issues"
+  },
+  "homepage": "https://github.com/iocapa/stcg#readme",
+  "devDependencies": {
+    "@types/jest": "^25.1.5",
+    "@types/node": "^13.11.0",
+    "jest": "^25.2.6",
+    "prettier": "^2.0.4",
+    "ts-jest": "^25.3.0",
+    "tslint": "^6.1.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.8.3"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "dependencies": {
+    "@apidevtools/json-schema-ref-parser": "^9.0.1",
+    "@types/argparse": "^1.0.38",
+    "@types/json-schema": "^7.0.4",
+    "@types/jsonpath": "^0.2.0",
+    "argparse": "^1.0.10",
+    "json-schema": "^0.2.5",
+    "jsonpath": "^1.0.2",
+    "vm2": "^3.9.1"
+  }
+}

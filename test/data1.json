@@ -1,0 +1,5 @@
+{
+    "$schema": "file:test/schema.json#",
+    "a": 0,
+    "b": 2
+}
